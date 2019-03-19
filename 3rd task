@@ -8,13 +8,16 @@
  * Wiki page explaining the conversion: 
  https://en.wikipedia.org/wiki/Binary_number#Decimal
  */
+ 
+ 
 function toBinaryString(input) {
   // Only change code below this line
+  
    let out = "", bit = 1;
     while( input >= bit ) { // >=
         out = ( input & bit ? 1 : 0 ) + out;
         bit <<= 1;
-    }
+     }
     return out || "0";
   // Only change code above this line
 }

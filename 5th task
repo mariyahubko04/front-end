@@ -11,8 +11,19 @@
  
 function hasAllLetters(pattern, phrase) {
   // Only change code below this line
-
-
+  pattern = pattern.replace(/\s+/g, '').toLowerCase();
+  phrase = phrase.replace(/\s+/g, '').toLowerCase();;
+  var i=0;
+     if( i < pattern.length){
+        let result = pattern.search(phrase.charAt(i));
+           if(result != -1){
+              i++;
+              return true;
+             }
+              else {
+                return false;
+               }
+             }
   // Only change code above this line
 }
 
